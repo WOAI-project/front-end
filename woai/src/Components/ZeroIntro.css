@@ -1,0 +1,14 @@
+.rebderZeroIntroInner {
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 0px 0px 15px 0px;
+}
+
+p, a {
+    font-family: 'Inconsolata', monospace;
+    font-size: 12px;
+}
+
+a:hover {
+    font-style: italic;
+}

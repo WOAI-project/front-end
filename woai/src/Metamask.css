@@ -1,0 +1,59 @@
+#mainContents {
+    text-align: center;
+}
+
+.maxWidth250 {
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+#stats {
+    padding-top: 10px;
+}
+
+small {
+    font-family: 'Inconsolata', monospace;
+    font-size: x-small;
+}
+
+#stats p {
+    font-size: small;
+    padding-bottom: 25px;
+    font-family: 'Inconsolata', monospace;
+}
+
+.collectionToggle {
+    margin-bottom: 15px;
+    --color: #ffa250;
+    --hover: #f4b909;
+    transition: 0.2s;
+    background: none;
+    border: 2px solid;
+    font: inherit;
+    line-height: 1;
+    margin: 3px 3px 15px 3px;
+    padding: 0.5em 1em;
+}
+
+.collectionToggle:hover, .collectionToggle:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    transform: translateY(-3px);
+    border-color: var(--hover);
+    color: rgb(47, 47, 47);
+}
+
+.connectMetamask {
+    margin-bottom: 15px;
+    transition: 0.2s;
+    background: none;
+    border: 2px solid;
+    font: inherit;
+    line-height: 1;
+    margin: 3px 3px 15px 3px;
+    padding: 0.5em 1em;
+    font-size: 14px;
+}
+
+.connectMetamask:hover {
+    cursor: pointer;
+}

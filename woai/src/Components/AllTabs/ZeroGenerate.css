@@ -1,0 +1,56 @@
+#RenderZeroGenerate {
+    width: 100%;
+    height: 350px;
+    display: flex;
+}
+
+#RenderZeroGenerateInner {
+    margin: auto;
+    text-align: center;
+    max-width: 400px;
+}
+
+form {
+    margin-top: -35px;
+}
+
+input, textarea {
+    margin: 3px 3px 3px 5px;
+    font-size: 12px;
+}
+
+.innerForm {
+    text-align: left;
+    margin-top: 40px;
+}
+
+#inID {
+    width: 30px;
+    margin-left: 60px !important;
+}
+
+#inGV {
+    width: 272px;
+    height: 58px;
+    margin-left: 10px !important;
+    overflow: hidden;
+    resize: none;
+}
+
+#buttonContainer {
+    text-align: right;
+}
+
+#setButton {
+    margin-right: 4px;
+    background: none;
+    border: 1px solid white;
+    font-family: 'Inconsolata', monospace;
+    color: white;
+    line-height: 2;
+    cursor: pointer;
+}
+
+.setButton:hover {
+    transform: translateY(-3px);
+}

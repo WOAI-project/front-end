@@ -1,0 +1,49 @@
+#RenderZeroMint {
+    width: 100%;
+    height: 350px;
+    display: flex;
+}
+
+#RenderZeroMintInner {
+    margin: auto;
+    text-align: center;
+}
+
+.mintButtons {
+    background: none;
+    border: 1px solid white;
+    font-family: 'Inconsolata', monospace;
+    color: white;
+    line-height: 2;
+    cursor: pointer;
+}
+
+.mintButtons:hover {
+    transform: translateY(-3px);
+}
+
+.mintButtonMain {
+    font-size: 16px;
+    color: white;
+    margin: 3px 25px;
+    padding: 5px 15px;
+}
+
+.mintButtonAux {
+    font-size: 12px;
+    margin: 3px 3px 15px 3px;
+    padding: 3px 5px;
+
+}
+
+input.referCheck {
+    cursor: pointer;
+}
+
+input.referField {
+    background-color: white;
+    border: 1px white !important;
+    color: black;
+    width: 290px;
+    font-size:12px;
+}

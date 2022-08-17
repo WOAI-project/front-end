@@ -1,0 +1,39 @@
+.Tabs {
+    max-width: 600px;
+    height: auto;
+    height: 400px;
+    background: black;
+    margin: 0px auto;
+    padding: 10px;
+    color: white;
+    border-radius: 3px;
+    border: 3px solid white;
+    outline: 3px solid black;
+}
+
+ul.nav {
+    width: 60%;
+    margin: 0 auto 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 2rem;
+    padding-left: 0px;
+  }
+
+ul.nav li {
+    margin: 0 auto;
+    transition: all 0.7s;
+}
+
+li {
+    display: flex;
+  }
+
+li:hover {
+    cursor: pointer;
+}
+
+li.active{
+    font-weight: bold;
+}

@@ -1,0 +1,12 @@
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <rect stroke="#000" height="64" width="64" y="0" x="0" stroke-dasharray="5,5,2,2" fill="#fff"/>
+  <g id="svg_4">
+    <text x="25%" y="25%" dominant-baseline="middle" text-anchor="middle" font-weight="bold" font-family="'Inconsolata" font-size="24">W</text> 
+    <text x="75%" y="25%" dominant-baseline="middle" text-anchor="middle" font-weight="bold" font-family="'Inconsolata" font-size="24">O</text> 
+    <text x="25%" y="75%" dominant-baseline="middle" text-anchor="middle" font-weight="bold" font-family="'Inconsolata" font-size="24">A</text> 
+    <text x="75%" y="75%" dominant-baseline="middle" text-anchor="middle" font-weight="bold" font-family="'Inconsolata" font-size="24">I</text> 
+  </g>
+ </g>
+</svg>
