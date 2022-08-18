@@ -33,7 +33,7 @@ class ZeroView extends Component {
   renderZeroView() {
     return (
       <div id="RenderZeroViewInner">
-        <img src={'http://woai-data.woai.io/zero/art/' + this.state.tokenView + '.png'}></img>
+        <img src={'https://d2q426wzrt520c.cloudfront.net/zero/art/' + this.state.tokenView + '.png'}></img> {/* Cloudfront highly availability + SSL */}
         <p>WOAI/Zero/{this.state.tokenView}</p>
         { /* <p>Owner: {this.state.owner.substring(0,5)}...{this.state.owner.substring(38,42)} <a href={'https://etherscan.io/address/' + this.state.owner} >↗</a></p> */}
         <div>
