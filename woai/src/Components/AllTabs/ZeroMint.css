@@ -47,3 +47,7 @@ input.referField {
     width: 290px;
     font-size:12px;
 }
+
+label {
+    bottom: 3px;
+}

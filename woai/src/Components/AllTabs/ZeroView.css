@@ -9,39 +9,25 @@
     text-align: center;
 }
 
-form {
-}
-
-#cols {
-    column-count: 3;
-    line-height: 0.25;
-}
-
-.subs {
-    position: absolute;
-    bottom: 50px !important;
-}
-
-#leftDiv {
-    height: 250px;
-    width: 50px;
-    text-align: left;
-    margin-bottom: 0px;
-}
-
-#centreDiv {
-    width: 232px;
-    text-align: center;
-}
-
-#rightDiv {
-    width: 50px;
-    text-align: right;
-}
-
 img {
-    max-width: 232px;
+    max-width: 250px;
     margin: 0 auto;
+}
+
+#RenderZeroViewInner span {
+   display: inline; 
+}
+
+table {
+
+}
+
+#trb {
+    max-height: 20px;
+}
+
+#trb p {
+    line-height: 0;
 }
 
 label {

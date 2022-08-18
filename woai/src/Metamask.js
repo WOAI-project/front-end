@@ -72,7 +72,7 @@ class Metamask extends Component {
           </div>
           <Tabs />
           <div id="stats">
-            <p>Welcome {this.state.selectedAddress.substring(0,5)}...{this.state.selectedAddress.substring(38,42)}! Block #{this.state.block}. ETH: {this.state.balance.substring(0,5)}.  WOAI: {this.state.woaiBalance}.</p>
+            <p>Welcome {this.state.selectedAddress.substring(0,5)}...{this.state.selectedAddress.substring(38,42)}! Block #{this.state.block}. ETH: {this.state.balance.substring(0,5)}.  WOAI: {this.state.woaiBalance}. <a href="https://docs.woai.io/woai-zero/faq" target="_blank">FAQ</a></p>
           </div>
           
 

@@ -10,7 +10,7 @@ function ZeroIntro() {
         <p>Owners of WOAI/Zero can choose to describe anything, subject to a few rules, and have DALL•E 2 turn it into an NFT. We highly recommend WOAI/Zero owners to read about DALL•E 2 and its technology before generating an image.</p>
         <p>Anyone can mint up to 10 WOAI/Zero's at a time for 0.05 ETH each. After minting, the NFT owners can take their time to think about <i>what</i> to generate into an image. The final product will be available within 24 hours.</p>
         <span>
-            <a href="https://openai.com/dall-e-2/" target="_blank">Read more about DALL-E 2</a> • <a href="https://openai.com/blog/dall-e/" target="_blank">Tips for wording</a> • <a href="https://arxiv.org/abs/2102.12092" target="_blank">Research</a>
+            <a href="https://openai.com/dall-e-2/" target="_blank">Read more about DALL-E 2</a> • <a href="https://openai.com/blog/dall-e/" target="_blank">Tips for wording</a> • <a href="https://arxiv.org/abs/2102.12092" target="_blank">Research</a> • <a href="https://docs.woai.io/woai-zero/faq" target="_blank">FAQ</a>
         </span>
       </div>
     );

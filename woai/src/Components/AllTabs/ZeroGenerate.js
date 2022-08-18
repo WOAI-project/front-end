@@ -27,6 +27,9 @@ class ZeroGenerate extends Component {
   }
   //END
 
+  //Handle paused generator (generationPaused)
+  //END
+
 
   renderZeroGenerate() {
     return (

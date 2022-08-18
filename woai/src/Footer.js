@@ -17,15 +17,15 @@ function Footer() {
                 </li>
                 <li>
                     <center>
-                        <img src={iconGithub} class="outlinks" title="Code"></img>
-                        <img src={iconGitbook} class="outlinks" title="Docs"></img>
+                        <a href="https://github.com/WOAI-project" target="_blank"><img src={iconGithub} class="outlinks" title="Code"></img></a>
+                        <a href="https://docs.woai.io/" target="_blank"><img src={iconGitbook} class="outlinks" title="Docs"></img></a>
                         <img class="separator"></img>
-                        <img src={iconMirror} class="outlinks" title="Blog"></img>
-                        <img src={iconTwitter} class="outlinks" title="Twitter"></img>
-                        <img src={iconDiscord} class="outlinks" title="Discord"></img>
+                        <a href="https://mirror.xyz/woai.eth" target="_blank"><img src={iconMirror} class="outlinks" title="Blog"></img></a>
+                        <a href="https://twitter.com/woai_io" target="_blank"><img src={iconTwitter} class="outlinks" title="Twitter"></img></a>
+                        <a href="https://discord.gg/76VSqqvavT" target="_blank"><img src={iconDiscord} class="outlinks" title="Discord"></img></a>
                         <img class="separator"></img>
-                        <img src={iconLooksRare} class="outlinks" title="LooksRare"></img>
-                        <img src={iconOpenSea} class="outlinks invert" title="OpenSea"></img>
+                        <a href="#" target="_blank"><img src={iconLooksRare} class="outlinks" title="LooksRare"></img></a>
+                        <a href="#" target="_blank"><img src={iconOpenSea} class="outlinks invert" title="OpenSea"></img></a>
                     </center>
                 </li>
                 <li>

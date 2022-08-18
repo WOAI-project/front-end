@@ -45,6 +45,8 @@ class ZeroMint extends Component {
   }
   //END
 
+  // Handle salesIsActive
+  //END
 
   // Handle Minting
   async mintWoai(numberOfTokens,referrerAddress) {
