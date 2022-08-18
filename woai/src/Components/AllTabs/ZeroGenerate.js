@@ -12,7 +12,7 @@ class ZeroGenerate extends Component {
     };
   }
 
-  //Handle setting generator value
+  // Handle setting generator value
   onSubmitSetGeneratorValue = async event => {
     event.preventDefault();
 
@@ -27,7 +27,13 @@ class ZeroGenerate extends Component {
   }
   //END
 
-  //Handle paused generator (generationPaused)
+  // Handle paused generator
+  //END
+
+  // Handle already generated
+  //END
+
+  // Handle a "success message"
   //END
 
 

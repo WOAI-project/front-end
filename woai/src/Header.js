@@ -4,13 +4,13 @@ import './Header.css';
 function Header() {
     return(
 
-        <header class="header">
+        <header className="header">
             <ul>
                 <li>
 
                 </li>
                 <li>
-                    <center><img src={logo} class="logo" alt="WOAI" /></center>
+                    <center><img src={logo} className="logo" alt="WOAI" /></center>
                 </li>
                 <li>
                     

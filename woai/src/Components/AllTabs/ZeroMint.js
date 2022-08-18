@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect } from 'react';
 import WoaiZeroABI from "../../WoaiZeroABI.json"
 import { ethers } from "ethers";
 
@@ -13,6 +13,7 @@ class ZeroMint extends Component {
       referrer: "",
       hasReferrer: false
     };
+
   }
 
   // Handle amount changes
@@ -45,7 +46,15 @@ class ZeroMint extends Component {
   }
   //END
 
-  // Handle salesIsActive
+  // Handle mint start
+    // Notice about when mint starts
+  //END
+
+  // Handle supply == 2500
+    // Notice if all minted
+  //END
+
+  // Handle successful mint
   //END
 
   // Handle Minting

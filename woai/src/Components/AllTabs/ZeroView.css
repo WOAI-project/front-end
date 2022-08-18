@@ -10,7 +10,7 @@
 }
 
 img {
-    max-width: 250px;
+    max-width: 300px;
     margin: 0 auto;
 }
 
@@ -18,12 +18,15 @@ img {
    display: inline; 
 }
 
-table {
 
+a {
+    color: white;
+    text-decoration: none;
 }
 
 #trb {
     max-height: 20px;
+    text-align: center;
 }
 
 #trb p {
@@ -34,4 +37,12 @@ label {
     font-size: 12px;
     font-family: 'Inconsolata', monospace;
     position: relative;
+}
+
+
+#viewForm input {
+    font-size: 12px;
+    width: 30px;
+    margin-left: 0px !important;
+    margin-top: 30px;
 }

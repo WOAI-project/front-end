@@ -33,9 +33,10 @@ class Metamask extends Component {
     const woaiBalanceBigNumber = await woaiZeroContract.balanceOf(accounts[0]);
     const woaiBalance = ethers.utils.formatEther(woaiBalanceBigNumber) * 10**18;
 
-    this.setState({ selectedAddress: accounts[0], balance: balanceInEther, block, woaiBalance })
+    this.setState({ selectedAddress: accounts[0], balance: balanceInEther, woaiBalance })
   }
   //END
+
 
   // Handle infopanel hide/show
   toggleHidden () {
@@ -57,7 +58,7 @@ class Metamask extends Component {
           <br />
           <br />
           <br />
-          <div class="maxWidth250">
+          <div className="maxWidth250">
             <small>If you are not quite ready to do that, find us on other platforms below</small>
           </div>
         </div>

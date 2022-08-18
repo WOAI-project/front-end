@@ -10,22 +10,22 @@ import './Footer.css';
 function Footer() {
     return(
 
-        <footer class="footer">
+        <footer className="footer">
             <ul>
                 <li>
                     <p></p>
                 </li>
                 <li>
                     <center>
-                        <a href="https://github.com/WOAI-project" target="_blank"><img src={iconGithub} class="outlinks" title="Code"></img></a>
-                        <a href="https://docs.woai.io/" target="_blank"><img src={iconGitbook} class="outlinks" title="Docs"></img></a>
-                        <img class="separator"></img>
-                        <a href="https://mirror.xyz/woai.eth" target="_blank"><img src={iconMirror} class="outlinks" title="Blog"></img></a>
-                        <a href="https://twitter.com/woai_io" target="_blank"><img src={iconTwitter} class="outlinks" title="Twitter"></img></a>
-                        <a href="https://discord.gg/76VSqqvavT" target="_blank"><img src={iconDiscord} class="outlinks" title="Discord"></img></a>
-                        <img class="separator"></img>
-                        <a href="#" target="_blank"><img src={iconLooksRare} class="outlinks" title="LooksRare"></img></a>
-                        <a href="#" target="_blank"><img src={iconOpenSea} class="outlinks invert" title="OpenSea"></img></a>
+                        <a href="https://github.com/WOAI-project" target="_blank"><img src={iconGithub} className="outlinks" title="Code"></img></a>
+                        <a href="https://docs.woai.io/" target="_blank"><img src={iconGitbook} className="outlinks" title="Docs"></img></a>
+                        <img className="separator"></img>
+                        <a href="https://mirror.xyz/woai.eth" target="_blank"><img src={iconMirror} className="outlinks" title="Blog"></img></a>
+                        <a href="https://twitter.com/woai_io" target="_blank"><img src={iconTwitter} className="outlinks" title="Twitter"></img></a>
+                        <a href="https://discord.gg/76VSqqvavT" target="_blank"><img src={iconDiscord} className="outlinks" title="Discord"></img></a>
+                        <img className="separator"></img>
+                        <a href="#" target="_blank"><img src={iconLooksRare} className="outlinks" title="LooksRare"></img></a>
+                        <a href="#" target="_blank"><img src={iconOpenSea} className="outlinks invert" title="OpenSea"></img></a>
                     </center>
                 </li>
                 <li>
