@@ -1,4 +1,4 @@
-import React, { Component, useEffect } from 'react';
+import React, { Component } from 'react';
 import WoaiZeroABI from "../../WoaiZeroABI.json"
 import { ethers } from "ethers";
 
