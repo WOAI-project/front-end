@@ -15,6 +15,7 @@ class ZeroView extends Component {
   }
 
   //Handle reading image data 
+  //BOUNTY (1 WOAI/Zero): Show the owner of the NFT rendered under the image. Some placeholder code exists. 
   //Missing functionality - owner is not read
   onSubmitGetOwner = async event => {
     event.preventDefault();

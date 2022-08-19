@@ -8,6 +8,10 @@ import './Metamask.css';
 import Tabs from "./Components/TabComponent/Tabs";
 import ZeroIntro from "./Components/ZeroIntro";
 
+//BOUNTY (1 WOAI/Zero each, up to 5): Add support for other wallets.
+//BOUNTY (3 WOAI/Zero): Prompt user to change to the right network and handle most common wallet connecting errors
+//BOUNTY (5 WOAI/Zero): Create a frontend that respects the current style but for mobile users (i.e. it has to look pretty and have the same functionality as the current app but on mobile). 
+
 class Metamask extends Component {
   constructor(props) {
     super(props);

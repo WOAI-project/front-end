@@ -28,12 +28,15 @@ class ZeroGenerate extends Component {
   //END
 
   // Handle paused generator
+    //BOUNTY (1 WOAI/Zero): Show a message on the frontend if the generator is paused
   //END
 
   // Handle already generated
+    //BOUNTY (1 WOAI/Zero): Show an error message if the WOAI/Zero has already been assigned a generatorValue
   //END
 
-  // Handle a "success message"
+  // Handle a "success message" and most common errors
+  //BOUNTY (3 WOAI/Zero): Show success & error messages on the front-end
   //END
 
 

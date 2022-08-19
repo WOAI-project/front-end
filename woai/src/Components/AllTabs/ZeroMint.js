@@ -47,14 +47,16 @@ class ZeroMint extends Component {
   //END
 
   // Handle mint start
+    //BOUNTY (1 WOAI/Zero): Show a warning on the front-end if mint hasn't started along with a count down to Sep 6, 12:00 UTC
     // Notice about when mint starts
   //END
 
   // Handle supply == 2500
-    // Notice if all minted
+    //BOUNTY (1 WOAI/Zero): Show an error message if everything has been minted (i.e. supply == 2500). 
   //END
 
-  // Handle successful mint
+  // Handle mint success & errors
+    //BOUNTY (3 WOAI/Zero): Show messages for success and the most common errors on the front-end (must be aligned with the general webapp style)
   //END
 
   // Handle Minting
