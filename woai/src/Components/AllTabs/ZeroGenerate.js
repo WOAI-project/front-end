@@ -29,6 +29,7 @@ class ZeroGenerate extends Component {
 
   // Handle paused generator
     //BOUNTY (1 WOAI/Zero): Show a message on the frontend if the generator is paused
+    //BOUNTY (1 WOAI/Zero): Differentiate between the reasons for pausing (time vs. manual pause) & show countdown timer until unpause if timed
   //END
 
   // Handle already generated
@@ -54,7 +55,7 @@ class ZeroGenerate extends Component {
             </div>
             <div>
               <label>Generator value</label>
-              <textarea id="inGV" maxLength="100" value={this.state.generatorValue} onChange={event => this.setState({ generatorValue: event.target.value })} />
+              <textarea id="inGV" maxLength="256" value={this.state.generatorValue} onChange={event => this.setState({ generatorValue: event.target.value })} />
             </div>
           </div>
           <div id="buttonContainer">

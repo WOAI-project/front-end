@@ -2,7 +2,7 @@ import './App.css';
 import Header from './Header'
 import Metamask from './Metamask'
 import Footer from './Footer'
-import Disclaimer from './Disclaimer'
+import Disclaimer from './Components/Disclaimer'
 
 function App() {
   return (
