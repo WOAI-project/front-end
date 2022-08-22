@@ -4,18 +4,22 @@ import { ethers } from "ethers";
 
 import "./ZeroView.css"
 
+//BOUNTY (1 WOAI/Zero): If the image file has not been set for the NFT you are viewing (i.e. 404), show a message telling the user so, instead of the 404 img icon
+//BOUNTY (1 WOAI/Zero): Use a (pseudo-)random NFT with existing art work as the default image when loading the tab. If there are no existing art works, show https://d2q426wzrt520c.cloudfront.net/zero/art/placeholder.png
+
 class ZeroView extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       owner: "0x0000000000000000000000000000000000000000",
-      tokenView: ""
+      tokenView: "p"
     };
   }
 
   //Handle reading image data 
   //BOUNTY (1 WOAI/Zero): Show the owner of the NFT rendered under the image. Some placeholder code exists. 
+  //BOUNTY (1 WOAI/Zero): Show the generator value of the NFT loaded. Formatting is super important to make it fit into the "frame" aesthetics of the page
   //Missing functionality - owner is not read
   onSubmitGetOwner = async event => {
     event.preventDefault();
