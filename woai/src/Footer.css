@@ -46,3 +46,8 @@ li:last-child {
     position: absolute;
     right: 3px;
 }
+
+.footerTextLink {
+    position: relative;
+    bottom: 6px !important;
+}

@@ -59,6 +59,10 @@ class ZeroMint extends Component {
     //BOUNTY (3 WOAI/Zero): Show messages for success and the most common errors on the front-end (must be aligned with the general webapp style)
   //END
 
+  // Handle referrer from URL parameters
+    //BOUNTY (2 WOAI/Zero): Allow user to pass referrer address as a URL parameter. This gets added as a referrer automatically.
+  //END
+
   // Handle Minting
   async mintWoai(numberOfTokens,referrerAddress) {
     const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -80,9 +84,10 @@ class ZeroMint extends Component {
   renderZeroMint() {
     return (
       <div id="RenderZeroMintInner">
+        { /* BOUNTY (1 WOAI/Zero): If the user has been on the page for 10 seconds without clicking anything, show a dismissable message "Having trouble? Check our docs and FAQ." */ }
         <button className="mintButtons mintButtonAux" onClick={() => this.minAmont()}>MIN</button>
         <button className="mintButtons mintButtonAux" onClick={() => this.decreaseAmont()}>-</button>
-        <button className="mintButtons mintButtonMain" onClick={() => this.mintWoai(this.state.amountToMint,this.state.referrer)}>Mint {this.state.amountToMint} WOAI</button>
+        <button title="By clicking the mint button you confirm you have carefully read and accepted the WOAI Terms of Use." className="mintButtons mintButtonMain" onClick={() => this.mintWoai(this.state.amountToMint,this.state.referrer)}>Mint {this.state.amountToMint} WOAI</button>
         <button className="mintButtons mintButtonAux" onClick={() => this.increaseAmont()}>+</button>
         <button className="mintButtons mintButtonAux" onClick={() => this.maxAmont()}>MAX</button>
         <br />

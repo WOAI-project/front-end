@@ -17,6 +17,8 @@ function Footer() {
                 </li>
                 <li>
                     <center>
+                        <a href="https://docs.woai.io/woai/bounties" className="footerTextLink" target="_blank">Bounties</a>
+                        <img className="separator"></img>
                         <a href="https://github.com/WOAI-project" target="_blank"><img src={iconGithub} className="outlinks" title="Code"></img></a>
                         <a href="https://docs.woai.io/" target="_blank"><img src={iconGitbook} className="outlinks" title="Docs"></img></a>
                         <img className="separator"></img>
@@ -26,6 +28,8 @@ function Footer() {
                         <img className="separator"></img>
                         <a href="#" target="_blank"><img src={iconLooksRare} className="outlinks" title="LooksRare"></img></a>
                         <a href="#" target="_blank"><img src={iconOpenSea} className="outlinks invert" title="OpenSea"></img></a>
+                        <img className="separator"></img>
+                        <a href="http://woai-data.woai.io/terms.html" className="footerTextLink" target="_blank">T&amp;C</a>
                     </center>
                 </li>
                 <li>

@@ -46,8 +46,7 @@ class ZeroGenerate extends Component {
       <div id="RenderZeroGenerateInner">
         <form onSubmit={this.onSubmitSetGeneratorValue}>
           <h4>Set Generator Value</h4>
-          <br />
-          <p>Set the value used to generate your NFT. Please read through the resources before committing. You can only do this once and there is no undoing. Godspeed.</p>
+          <p>Set the value used to generate your NFT. Please read through the resources before committing. You can only do this once and there is no undoing. Godspeed. <br/><a className='textLinkGenerator' href="https://docs.woai.io/woai-zero/generate" target="_blank">Open user guide.</a></p>
           <div className='innerForm'>
             <div>
               <label>Token ID</label>
@@ -56,6 +55,10 @@ class ZeroGenerate extends Component {
             <div>
               <label>Generator value</label>
               <textarea id="inGV" maxLength="256" value={this.state.generatorValue} onChange={event => this.setState({ generatorValue: event.target.value })} />
+            </div>
+            <div id="divTerms">
+              <label id="laTerms">Accept <a href="http://woai-data.woai.io/terms.html" target="_blank">WOAI terms</a> and <a href="https://labs.openai.com/policies/content-policy" target="_blank">OpenAI content policy</a></label>
+              <input type="checkbox" id="inTerms" required="required" />
             </div>
           </div>
           <div id="buttonContainer">
