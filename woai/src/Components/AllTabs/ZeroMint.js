@@ -94,7 +94,7 @@ class ZeroMint extends Component {
         <br />
         <br />
         <span><input type="checkbox" className='referCheck' value={this.state.hasReferrer} onChange={() => this.toggleReferrer()} /> {(!this.state.hasReferrer) ? <label>Referred?</label> : <label></label>}</span>
-        {(this.state.hasReferrer) ? <input type="text" maxLength="42" className='referField' title="Enter referrer address here" value={this.state.referrer} onChange={event => this.setState({ referrer: event.target.value})}></input> : <p></p> }
+        {(this.state.hasReferrer) ? <input type="text" maxLength="42" placeholder='referrer address' className='referField' title="Enter referrer address here" value={this.state.referrer} onChange={event => this.setState({ referrer: event.target.value})}></input> : <p></p> }
       </div>
     )
   }

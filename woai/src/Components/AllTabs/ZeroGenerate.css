@@ -65,10 +65,30 @@ input, textarea {
 }
 
 #inTerms {
-    margin-left: 73px;
+    margin-left: 59px;
 }
 
 .textLinkGenerator {
     color: white;
     font-size: 10px;
+}
+
+.loaderTextContainer {
+    margin: auto;
+}
+
+.generatorPauseText {
+    color: red;
+    background-color: white;
+    padding: 3px 6px;
+}
+
+.generatorPauseText a {
+    color: red;
+    background-color: white;
+}
+
+.buttonDisabled {
+    cursor: not-allowed !important;
+    text-decoration: line-through;
 }

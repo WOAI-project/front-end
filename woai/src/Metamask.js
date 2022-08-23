@@ -37,6 +37,14 @@ class Metamask extends Component {
     const woaiBalanceBigNumber = await woaiZeroContract.balanceOf(accounts[0]);
     const woaiBalance = ethers.utils.formatEther(woaiBalanceBigNumber) * 10**18;
 
+
+
+    // View tab data
+    //END
+
+    // Mint tab data
+    //END
+
     this.setState({ selectedAddress: accounts[0], balance: balanceInEther, woaiBalance })
   }
   //END

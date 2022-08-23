@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
-import WoaiZeroABI from "../../WoaiZeroABI.json"
+import WoaiZeroABI from "../../WoaiZeroABI.json";
 import { ethers } from "ethers";
 
-import "./ZeroGenerate.css"
+import "./ZeroGenerate.css";
+
 
 class ZeroGenerate extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
+      loadedData : false
     };
   }
 
@@ -28,8 +30,15 @@ class ZeroGenerate extends Component {
   //END
 
   // Handle paused generator
-    //BOUNTY (1 WOAI/Zero): Show a message on the frontend if the generator is paused
-    //BOUNTY (1 WOAI/Zero): Differentiate between the reasons for pausing (time vs. manual pause) & show countdown timer until unpause if timed
+  async getPauseState() {
+    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    const woaiZeroContract = new ethers.Contract("0x9E61574ceeb8a3dd924C9f1dAE5ca95Bb684Ab29", WoaiZeroABI, provider);  //Testnet contract address
+    const generatorIsPaused = await woaiZeroContract.generationPaused();
+    const generatorIsManuallyPaused = await woaiZeroContract.isManuallyPaused();
+    this.setState({ generatorIsPaused : generatorIsPaused, generatorIsManuallyPaused : generatorIsManuallyPaused })
+    console.log(this.state.generatorIsManuallyPaused, this.state.generatorIsPaused, "called2");
+    this.setState({ loadedData : true })
+  }
   //END
 
   // Handle already generated
@@ -42,11 +51,17 @@ class ZeroGenerate extends Component {
 
 
   renderZeroGenerate() {
+    if (!this.state.loadedData) {
+      this.getPauseState()
+      return (<div className='loaderTextContainer'><p className='loaderText'>Loading...</p></div>)
+    }
     return (
       <div id="RenderZeroGenerateInner">
         <form onSubmit={this.onSubmitSetGeneratorValue}>
-          <h4>Set Generator Value</h4>
-          <p>Set the value used to generate your NFT. Please read through the resources before committing. You can only do this once and there is no undoing. Godspeed. <br/><a className='textLinkGenerator' href="https://docs.woai.io/woai-zero/generate" target="_blank">Open user guide.</a></p>
+          {(this.state.generatorIsPaused && this.state.generatorIsManuallyPaused) ? <p className='generatorPauseText'>The Generator is currently paused. Follow our social media for updates.</p> : <p></p>}
+          {(this.state.generatorIsPaused && !this.state.generatorIsManuallyPaused) ? <p className='generatorPauseText'>The daily generator limit has been reached. Check back later or read our <a href="https://docs.woai.io/woai-zero/generate" target="blank">docs</a>.</p> : <p></p>}
+          {(!this.state.generatorIsPaused && !this.state.generatorIsManuallyPaused) ? <p>Set the value used to generate your NFT. Please read through the resources before committing. You can only do this once and there is no undoing. Godspeed. <br/><a className='textLinkGenerator' href="https://docs.woai.io/woai-zero/generate" target="_blank">Open user guide.</a></p> : <p></p>}
+          <br />
           <div className='innerForm'>
             <div>
               <label>Token ID</label>
@@ -57,12 +72,12 @@ class ZeroGenerate extends Component {
               <textarea id="inGV" maxLength="256" value={this.state.generatorValue} onChange={event => this.setState({ generatorValue: event.target.value })} />
             </div>
             <div id="divTerms">
-              <label id="laTerms">Accept <a href="http://woai-data.woai.io/terms.html" target="_blank">WOAI terms</a> and <a href="https://labs.openai.com/policies/content-policy" target="_blank">OpenAI content policy</a></label>
+              <label id="laTerms">I accept <a href="http://woai-data.woai.io/terms.html" target="_blank">WOAI terms</a> and <a href="https://labs.openai.com/policies/content-policy" target="_blank">OpenAI content policy</a></label>
               <input type="checkbox" id="inTerms" required="required" />
             </div>
           </div>
           <div id="buttonContainer">
-            <button id="setButton">Set value</button>
+            <button id="setButton" className={(this.state.generatorIsPaused) ? 'buttonDisabled' : ''}>Set value</button>
           </div>
         </form>
       </div>
