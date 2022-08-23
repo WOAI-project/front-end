@@ -19,7 +19,7 @@ class ZeroGenerate extends Component {
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     const signer = provider.getSigner()
 
-    const woaiZeroContract = new ethers.Contract("0x6785a973A5d33921aB21F704de0a7bf09304D08a", WoaiZeroABI, provider);  //Testnet contract address
+    const woaiZeroContract = new ethers.Contract("0x9E61574ceeb8a3dd924C9f1dAE5ca95Bb684Ab29", WoaiZeroABI, provider);  //Testnet contract address
 
     const woaiZeroWithSigner = woaiZeroContract.connect(signer);
     console.log(this.state.tokenId, this.state.generatorValue)

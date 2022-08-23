@@ -25,7 +25,7 @@ class ZeroView extends Component {
     event.preventDefault();
 
     const provider = new ethers.providers.Web3Provider(window.ethereum);
-    const woaiZeroContract = new ethers.Contract("0x6785a973A5d33921aB21F704de0a7bf09304D08a", WoaiZeroABI, provider);  //Testnet contract address
+    const woaiZeroContract = new ethers.Contract("0x9E61574ceeb8a3dd924C9f1dAE5ca95Bb684Ab29", WoaiZeroABI, provider);  //Testnet contract address
     const tokenOwner = woaiZeroContract.ownerOf(this.state.tokenView);
     console.log(woaiZeroContract.ownerOf(this.state.tokenView))
 
