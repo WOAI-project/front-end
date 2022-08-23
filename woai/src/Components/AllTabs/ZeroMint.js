@@ -11,7 +11,8 @@ class ZeroMint extends Component {
     this.state = {
       amountToMint: 5,
       referrer: "",
-      hasReferrer: false
+      hasReferrer: false,
+      loadedData: false
     };
 
   }
@@ -47,12 +48,15 @@ class ZeroMint extends Component {
   //END
 
   // Handle mint start
-    //BOUNTY (1 WOAI/Zero): Show a warning on the front-end if mint hasn't started along with a count down to Sep 6, 12:00 UTC
-    // Notice about when mint starts
-  //END
-
-  // Handle supply == 2500
-    //BOUNTY (1 WOAI/Zero): Show an error message if everything has been minted (i.e. supply == 2500). 
+  async getMintState() {
+    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    const woaiZeroContract = new ethers.Contract("0x9E61574ceeb8a3dd924C9f1dAE5ca95Bb684Ab29", WoaiZeroABI, provider);  //Testnet contract address
+    const totalSupply = await woaiZeroContract.totalSupply();
+    const saleIsActive = await woaiZeroContract.saleIsActive();
+    this.setState({ totalSupply : totalSupply, saleIsActive : saleIsActive })
+    console.log(this.state.totalSupply, this.state.saleIsActive, "called1");
+    this.setState({ loadedData : true })
+  }
   //END
 
   // Handle mint success & errors
@@ -82,8 +86,14 @@ class ZeroMint extends Component {
 
 
   renderZeroMint() {
+    if (!this.state.loadedData) {
+      this.getMintState()
+      return (<div className='loaderTextContainer'><p className='loaderText'>Loading...</p></div>)
+    }
     return (
       <div id="RenderZeroMintInner">
+        {(!this.state.saleIsActive) ? <p className='mintError'><b>Minting has not begun yet.</b> <br/> Please check back on Sep 6 at 12:00 UTC</p> : <p></p>}
+        {(this.state.totalSupply == 2500) ? <p className='mintError'><b>Collection has sold out.</b> <br/> Follow us on <a href="https://twitter.com/woai_io" target="_blank">Twitter</a> to stay up to date with new projects</p> : <p></p>}
         { /* BOUNTY (1 WOAI/Zero): If the user has been on the page for 10 seconds without clicking anything, show a dismissable message "Having trouble? Check our docs and FAQ." */ }
         <button className="mintButtons mintButtonAux" onClick={() => this.minAmont()}>MIN</button>
         <button className="mintButtons mintButtonAux" onClick={() => this.decreaseAmont()}>-</button>
