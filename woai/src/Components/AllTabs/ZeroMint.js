@@ -50,7 +50,7 @@ class ZeroMint extends Component {
   // Handle mint start
   async getMintState() {
     const provider = new ethers.providers.Web3Provider(window.ethereum);
-    const woaiZeroContract = new ethers.Contract("0x9E61574ceeb8a3dd924C9f1dAE5ca95Bb684Ab29", WoaiZeroABI, provider);  //Testnet contract address
+    const woaiZeroContract = new ethers.Contract("0x32fa352d905C2dacf3B79C4f9E123e7F93f2187B", WoaiZeroABI, provider);  //Testnet contract address
     const totalSupply = await woaiZeroContract.totalSupply();
     const saleIsActive = await woaiZeroContract.saleIsActive();
     this.setState({ totalSupply : totalSupply, saleIsActive : saleIsActive })
@@ -72,7 +72,7 @@ class ZeroMint extends Component {
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     const signer = provider.getSigner()
 
-    const woaiZeroContract = new ethers.Contract("0x9E61574ceeb8a3dd924C9f1dAE5ca95Bb684Ab29", WoaiZeroABI, provider);  //Testnet contract address
+    const woaiZeroContract = new ethers.Contract("0x32fa352d905C2dacf3B79C4f9E123e7F93f2187B", WoaiZeroABI, provider);  //Testnet contract address
 
     const woaiZeroWithSigner = woaiZeroContract.connect(signer);
     if (referrerAddress.length == 0) {

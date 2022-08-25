@@ -21,7 +21,7 @@ class ZeroGenerate extends Component {
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     const signer = provider.getSigner()
 
-    const woaiZeroContract = new ethers.Contract("0x9E61574ceeb8a3dd924C9f1dAE5ca95Bb684Ab29", WoaiZeroABI, provider);  //Testnet contract address
+    const woaiZeroContract = new ethers.Contract("0x32fa352d905C2dacf3B79C4f9E123e7F93f2187B", WoaiZeroABI, provider);  //Testnet contract address
 
     const woaiZeroWithSigner = woaiZeroContract.connect(signer);
     console.log(this.state.tokenId, this.state.generatorValue)
@@ -32,7 +32,7 @@ class ZeroGenerate extends Component {
   // Handle paused generator
   async getPauseState() {
     const provider = new ethers.providers.Web3Provider(window.ethereum);
-    const woaiZeroContract = new ethers.Contract("0x9E61574ceeb8a3dd924C9f1dAE5ca95Bb684Ab29", WoaiZeroABI, provider);  //Testnet contract address
+    const woaiZeroContract = new ethers.Contract("0x32fa352d905C2dacf3B79C4f9E123e7F93f2187B", WoaiZeroABI, provider);  //Testnet contract address
     const generatorIsPaused = await woaiZeroContract.generationPaused();
     const generatorIsManuallyPaused = await woaiZeroContract.isManuallyPaused();
     this.setState({ generatorIsPaused : generatorIsPaused, generatorIsManuallyPaused : generatorIsManuallyPaused })

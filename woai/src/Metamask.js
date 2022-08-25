@@ -33,7 +33,7 @@ class Metamask extends Component {
       this.setState({ block })
     })
 
-    const woaiZeroContract = new ethers.Contract("0x9E61574ceeb8a3dd924C9f1dAE5ca95Bb684Ab29", WoaiZeroABI, provider);  //Testnet contract address
+    const woaiZeroContract = new ethers.Contract("0x32fa352d905C2dacf3B79C4f9E123e7F93f2187B", WoaiZeroABI, provider);  //Testnet contract address
     const woaiBalanceBigNumber = await woaiZeroContract.balanceOf(accounts[0]);
     const woaiBalance = ethers.utils.formatEther(woaiBalanceBigNumber) * 10**18;
 
