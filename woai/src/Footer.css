@@ -4,6 +4,7 @@
     font-family: 'Inconsolata';
     position: fixed;
     bottom: 0px;
+    height: 50px;
 }
 
 .logo {
@@ -12,7 +13,7 @@
 
 .outlinks {
     height: 16px;
-    padding: 3px;
+    padding: 25px 3px 3px 3px;
 }
 
 .separator {
@@ -34,20 +35,35 @@ ul {
   }
 li {
     display: flex;
+    bottom: 0px;
   }
 
 
 li:first-child {
     position: absolute;
-    left: 3px;
+    left: 5px;
 }
 
 li:last-child {
     position: absolute;
-    right: 3px;
+    right: 5px;
 }
 
 .footerTextLink {
     position: relative;
     bottom: 6px !important;
+}
+
+.featuredIcons {
+    padding: 0px;
+    height: 48px;
+}
+
+.featuredTable {
+    bottom: 0px;
+}
+
+.featuredTable th {
+    line-height: 0px;
+    text-align: center;
 }
