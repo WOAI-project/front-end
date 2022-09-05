@@ -17,16 +17,7 @@ function Footer() {
         <footer className="footer">
             <ul>
                 <li>
-                    <table className="featuredTable">
-                        <tr>
-                            <th colspan="2"><p>As seen on</p></th>
-                        </tr>
-                        <tr>
-                            { /* <td><a href="https://www.non-fungi.com/" target="_blank"><img src={iconNonFungi} className="outlinks featuredIcons" title="non-fungi.com"></img></a></td> */ }
-                            <td><a href="https://nftcalendar.io/" target="_blank"><img src={iconNftCalendar} className="outlinks featuredIcons" title="nftcalendar.io"></img></a></td>
-                            <td></td>
-                        </tr>
-                    </table>
+                    
                 </li>
                 <li>
                     <center>

@@ -50,7 +50,7 @@ class ZeroMint extends Component {
   // Handle mint start
   async getMintState() {
     const provider = new ethers.providers.Web3Provider(window.ethereum);
-    const woaiZeroContract = new ethers.Contract("0x32fa352d905C2dacf3B79C4f9E123e7F93f2187B", WoaiZeroABI, provider);  //Testnet contract address
+    const woaiZeroContract = new ethers.Contract("0x0eAbED78fd49AD3c0A3e445954f29522025c09A0", WoaiZeroABI, provider); 
     const totalSupply = await woaiZeroContract.totalSupply();
     const saleIsActive = await woaiZeroContract.saleIsActive();
     this.setState({ totalSupply : totalSupply, saleIsActive : saleIsActive })
@@ -72,13 +72,13 @@ class ZeroMint extends Component {
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     const signer = provider.getSigner()
 
-    const woaiZeroContract = new ethers.Contract("0x32fa352d905C2dacf3B79C4f9E123e7F93f2187B", WoaiZeroABI, provider);  //Testnet contract address
+    const woaiZeroContract = new ethers.Contract("0x0eAbED78fd49AD3c0A3e445954f29522025c09A0", WoaiZeroABI, provider); 
 
     const woaiZeroWithSigner = woaiZeroContract.connect(signer);
     if (referrerAddress.length == 0) {
-      woaiZeroWithSigner.mintWoai(numberOfTokens,{value:1*numberOfTokens});    //button onclick defined for testnet!
+      woaiZeroWithSigner.mintWoai(numberOfTokens,{value:1*numberOfTokens});  
     } else {
-      woaiZeroWithSigner.mintAndRefer(numberOfTokens,referrerAddress,{value:1*numberOfTokens});   //button onclick defined for testnet!
+      woaiZeroWithSigner.mintAndRefer(numberOfTokens,referrerAddress,{value:1*numberOfTokens}); 
       console.log(referrerAddress)
     }
   }

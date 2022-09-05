@@ -27,7 +27,7 @@ class ZeroView extends Component {
   getImageData = async event => {
     this.setState({ loadedData : true })
     const provider = new ethers.providers.Web3Provider(window.ethereum);
-    const woaiZeroContract = new ethers.Contract("0x32fa352d905C2dacf3B79C4f9E123e7F93f2187B", WoaiZeroABI, provider);  //Testnet contract address
+    const woaiZeroContract = new ethers.Contract("0x0eAbED78fd49AD3c0A3e445954f29522025c09A0", WoaiZeroABI, provider);
     const tokenOwner = await woaiZeroContract.ownerOf(this.state.tokenView);
     const tokenGeneratorValue = await woaiZeroContract.generatorValue(this.state.tokenView);
     this.setState({ tokenOwner : tokenOwner, tokenGeneratorValue : tokenGeneratorValue })

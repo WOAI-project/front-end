@@ -33,7 +33,7 @@ class Metamask extends Component {
       this.setState({ block })
     })
 
-    const woaiZeroContract = new ethers.Contract("0x32fa352d905C2dacf3B79C4f9E123e7F93f2187B", WoaiZeroABI, provider);  //Testnet contract address
+    const woaiZeroContract = new ethers.Contract("0x0eAbED78fd49AD3c0A3e445954f29522025c09A0", WoaiZeroABI, provider); 
     const woaiBalanceBigNumber = await woaiZeroContract.balanceOf(accounts[0]);
     const woaiBalance = ethers.utils.formatEther(woaiBalanceBigNumber) * 10**18;
 
@@ -64,6 +64,10 @@ class Metamask extends Component {
         <div>
           <h4>Welcome to the World of AI</h4>
           <p>To proceed, please connect your wallet</p>
+          <small>Please ensure you are on Ethereum Mainnet</small>
+          <br />
+          <br />
+          <br />
           <br />
           <button className="connectMetamask" onClick={() => this.connectToMetamask()}>Connect Metamask</button>
           <br />
