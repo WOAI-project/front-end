@@ -17,7 +17,7 @@ function Footer() {
         <footer className="footer">
             <ul>
                 <li>
-                    
+                    <a href="http://woai-data.woai.io/contact.html" className='footerTextLink' target="_blank">Contact</a>
                 </li>
                 <li>
                     <center>
