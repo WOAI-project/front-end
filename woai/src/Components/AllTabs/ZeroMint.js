@@ -75,10 +75,16 @@ class ZeroMint extends Component {
     const woaiZeroContract = new ethers.Contract("0x0eAbED78fd49AD3c0A3e445954f29522025c09A0", WoaiZeroABI, provider); 
 
     const woaiZeroWithSigner = woaiZeroContract.connect(signer);
+
+    const intermediateValue = numberOfTokens*50000000000000000
+    const intermediateValueTwo = intermediateValue.toString();
+    const passValue = ethers.BigNumber.from(intermediateValueTwo);
+
     if (referrerAddress.length == 0) {
-      woaiZeroWithSigner.mintWoai(numberOfTokens,{value:1*numberOfTokens});  
+      woaiZeroWithSigner.mintWoai(numberOfTokens,{value:passValue});  
     } else {
-      woaiZeroWithSigner.mintAndRefer(numberOfTokens,referrerAddress,{value:1*numberOfTokens}); 
+      
+      woaiZeroWithSigner.mintAndRefer(numberOfTokens,referrerAddress,{value:passValue}); 
       console.log(referrerAddress)
     }
   }
