@@ -313,8 +313,8 @@ td {
 }
 /* END Crossfade animation */
 
-@media screen and (max-width: 600px) {
-    .collectionPreviewColumn {
+@media screen and (max-width: 660px) {
+    .collectionPreviewColumn, .collectionPreviewColumnAlt {
         display: none;
     }
 }
@@ -329,16 +329,22 @@ td {
 }
 
 #featured {
-    padding: 25px;
-    height: 180px;
-    width: 100vw;
-    margin: 10px;
+    padding: 25px 0px 50px 0px;
     text-align: center;
-    display: table-cell;
-    vertical-align: middle;
+}
+
+#featured ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#featured ul li {
+    display: block;
+    position: relative;
 }
 
 #featured img {
     width: 128px;
     padding: 32px;
+    margin: 0px auto;
 }

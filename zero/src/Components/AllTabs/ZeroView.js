@@ -35,7 +35,7 @@ class ZeroView extends Component {
   }
   //END
 
-
+  //BOUNTY (2 WOAI/Zero): owner address and generator message do not get refreshed correctly - fix pls
   renderZeroView() {
     if (!this.state.loadedData) {
       this.getImageData()
