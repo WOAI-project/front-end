@@ -98,7 +98,7 @@ class ZeroMint extends Component {
     }
     return (
       <div id="RenderZeroMintInner">
-        {(!this.state.saleIsActive) ? <p className='mintError'><b>Minting has not begun yet.</b> <br/> Please check back on Sep 6 at 12:00 UTC</p> : <p></p>}
+        {(!this.state.saleIsActive) ? <p className='mintError'><b>Minting is currently paused.</b> <br/> See our <a target="_blank" href="https://twitter.com/woai_io/status/1581831038749188098">announcement</a> for more information.</p> : <p></p>}
         {(this.state.totalSupply == 2500) ? <p className='mintError'><b>Collection has sold out.</b> <br/> Follow us on <a href="https://twitter.com/woai_io" target="_blank">Twitter</a> to stay up to date with new projects</p> : <p></p>}
         { /* BOUNTY (1 WOAI/Zero): If the user has been on the page for 10 seconds without clicking anything, show a dismissable message "Having trouble? Check our docs and FAQ." */ }
         <button className="mintButtons mintButtonAux" onClick={() => this.minAmont()}>MIN</button>

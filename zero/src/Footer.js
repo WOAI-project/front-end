@@ -24,7 +24,6 @@ function Footer() {
                         <a href="https://github.com/WOAI-project" target="_blank"><img src={iconGithub} className="outlinks" title="Code"></img></a>
                         <a href="https://docs.woai.io/" target="_blank"><img src={iconGitbook} className="outlinks" title="Docs"></img></a>
                         <img className="separator"></img>
-                        <a href="https://mirror.xyz/woai.eth" target="_blank"><img src={iconMirror} className="outlinks" title="Blog"></img></a>
                         <a href="https://twitter.com/woai_io" target="_blank"><img src={iconTwitter} className="outlinks" title="Twitter"></img></a>
                         <a href="https://discord.gg/76VSqqvavT" target="_blank"><img src={iconDiscord} className="outlinks" title="Discord"></img></a>
                         <img className="separator"></img>
